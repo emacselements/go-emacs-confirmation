@@ -35,11 +35,17 @@ Hades eliminates confirmation dialogs for:
 
 No configuration needed - just load the package and all confirmations are disabled automatically.
 
-If you want to restore the default "kill Emacs" keybinding (which Hades comments out), add this to your init file:
+### Restoring the C-x C-c Keybinding
+
+By default, Hades comments out the standard `C-x C-c` keybinding that exits Emacs. This is intentional because with all confirmation prompts disabled, accidentally pressing `C-x C-c` would immediately quit Emacs without any warning - even if you have unsaved files or running processes.
+
+If you prefer to keep this keybinding despite the risks, you can restore it by adding this to your init file:
 
 ```elisp
 (global-set-key (kbd "C-x C-c") 'kill-emacs)
 ```
+
+**Warning**: With this keybinding restored and Hades active, `C-x C-c` will exit Emacs instantly without any safety checks. Make sure you save your work frequently!
 
 ## Requirements
 
