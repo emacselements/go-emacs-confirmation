@@ -43,7 +43,7 @@ If you want to restore the default "kill Emacs" keybinding (which Hades comments
 
 ## Requirements
 
-- Emacs 29.1 or later (uses `setopt` for setting user options)
+- Emacs 28.1 or later (uses `setopt` for setting user options)
 - For older Emacs versions, replace `setopt` with `setq` in the source
 
 ## Why "Hades"?
