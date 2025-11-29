@@ -1,15 +1,20 @@
-# Goodbye to Emacs Confirmation Hell
+# go-emacs-confirmation
 
-## What It Does
+Disables confirmation prompts in Emacs for faster workflows.
 
-Eliminates confirmation dialogs for:
+## Installation
 
-- **Killing Emacs**: Exit immediately without "Active processes exist" warnings
-- **File Operations**: Follow symlinks, create new buffers, and revert files without prompts
-- **Dired Operations**: Delete files recursively, run shell commands, and perform batch operations (copy, chmod, symlink, etc.) without confirmations
-- **Buffer Management**: Kill process buffers and deleted file buffers silently
+Copy the contents of `go-emacs-confirmation.el` to your Emacs config.
+
+## Features
+
+- Exit Emacs without process/unsaved file warnings
+- Auto-follow symlinks
+- Skip prompts for new buffers and file reverts
+- Dired: recursive deletes, batch operations (copy, chmod, symlink, etc.) without confirmations
+- Use `y`/`n` instead of `yes`/`no` for remaining prompts
 
 ## Warning
 
-Accidentally pressing `C-x C-c` will immediately quit Emacs without any warning - even if you have unsaved files or running processes.
+`C-x C-c` will quit immediately without any confirmation.
 
